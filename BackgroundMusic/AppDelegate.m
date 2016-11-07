@@ -22,10 +22,14 @@
     NSError *error;
     if (![session setCategory:AVAudioSessionCategoryPlayback error:&error]) {
         NSLog(@"Category Set Fail, error: %@", error);
+    } else {
+        NSLog(@"Category Set Success");
     }
     
     if (![session setActive:YES error:&error]) {
         NSLog(@"Active Fail, error: %@", error);
+    } else {
+        NSLog(@"Active Success");
     }
 
     return YES;
